@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14B52F3C-CBC9-4BF2-BBE5-3201DA0BFD7B}</ProjectGuid>
+    <ProjectGuid>{891AD106-A9A4-4D1A-A250-DAB91C76BC86}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>E10_SimpleTextEditor</RootNamespace>
-    <AssemblyName>E10-SimpleTextEditor</AssemblyName>
+    <RootNamespace>E11_PoisonousPlants</RootNamespace>
+    <AssemblyName>E11-PoisonousPlants</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleTextEditor.cs" />
+    <Compile Include="PoisonousPlants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
