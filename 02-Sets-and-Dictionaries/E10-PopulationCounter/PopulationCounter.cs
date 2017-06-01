@@ -14,13 +14,17 @@ namespace E10_PopulationCounter
         private static void PrintPopulation(Dictionary<string, Dictionary<string, long>> populationCounter)
         {
             var countriesPopulationDesc = populationCounter
-                                        .Select(x => new { Country = x.Key, Population = x.Value.Values.Sum() })
-                                        .OrderByDescending(x => x.Population);
+                .Select(x => new
+                {
+                    Country = x.Key,
+                    Population = x.Value.Values.Sum()
+                })
+                .OrderByDescending(x => x.Population);
             foreach (var kvp in countriesPopulationDesc)
             {
                 Console.WriteLine($"{kvp.Country} (total population: {kvp.Population})");
                 var cityPopulationDesc = populationCounter[kvp.Country]
-                                        .OrderByDescending(x => x.Value); // population DESC
+                    .OrderByDescending(x => x.Value); // population DESC
                 foreach (var cityPopulation in cityPopulationDesc)
                 {
                     Console.WriteLine($"=>{cityPopulation.Key}: {cityPopulation.Value}"); // city - city population

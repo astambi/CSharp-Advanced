@@ -7,8 +7,22 @@ namespace E04_CountSymbols
     {
         public static void Main()
         {
-            string text = Console.ReadLine();
+            SortedDictionary<char, int> symbolCounts = GetSymbolCounts();
+            PrintCounts(symbolCounts);
+        }
+
+        private static void PrintCounts(SortedDictionary<char, int> symbolCounts)
+        {
+            foreach (var kvp in symbolCounts)
+            {
+                Console.WriteLine($"{kvp.Key}: {kvp.Value} time/s");
+            }
+        }
+
+        private static SortedDictionary<char, int> GetSymbolCounts()
+        {
             var symbolCounts = new SortedDictionary<char, int>();
+            string text = Console.ReadLine();
             foreach (var symbol in text)
             {
                 if (!symbolCounts.ContainsKey(symbol))
@@ -17,10 +31,8 @@ namespace E04_CountSymbols
                 }
                 symbolCounts[symbol]++;
             }
-            foreach (var kvp in symbolCounts)
-            {
-                Console.WriteLine($"{kvp.Key}: {kvp.Value} time/s");
-            }
+
+            return symbolCounts;
         }
     }
 }
