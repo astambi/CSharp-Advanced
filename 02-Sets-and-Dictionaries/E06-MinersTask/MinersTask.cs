@@ -7,8 +7,21 @@ namespace E06_MinersTask
     {
         public static void Main()
         {
-            var resources = new Dictionary<string, long>();
+            var resources = GetResources();
+            PrintResources(resources);
+        }
 
+        private static void PrintResources(Dictionary<string, long> resources)
+        {
+            foreach (var kvp in resources)
+            {
+                Console.WriteLine($"{kvp.Key} -> {kvp.Value}");
+            }
+        }
+
+        private static Dictionary<string, long> GetResources()
+        {
+            var resources = new Dictionary<string, long>();
             while (true)
             {
                 string input = Console.ReadLine();
@@ -20,10 +33,7 @@ namespace E06_MinersTask
                 }
                 resources[input] += int.Parse(Console.ReadLine());
             }
-            foreach (var kvp in resources)
-            {
-                Console.WriteLine($"{kvp.Key} -> {kvp.Value}");
-            }
-        }
+            return resources;
+        }        
     }
 }

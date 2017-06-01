@@ -7,6 +7,12 @@ namespace E07_FixEmails
     {
         public static void Main()
         {
+            var emails = GetEmails();
+            PrintEmails(emails);
+        }
+
+        private static Dictionary<string, string> GetEmails()
+        {
             var emails = new Dictionary<string, string>();
 
             while (true)
@@ -19,6 +25,12 @@ namespace E07_FixEmails
 
                 emails[input] = email;
             }
+
+            return emails;
+        }
+
+        private static void PrintEmails(Dictionary<string, string> emails)
+        {
             foreach (var kvp in emails)
             {
                 Console.WriteLine($"{kvp.Key} -> {kvp.Value}");

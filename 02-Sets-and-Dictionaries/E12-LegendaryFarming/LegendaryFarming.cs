@@ -10,7 +10,10 @@ namespace E12_LegendaryFarming
 
         public static void Main()
         {
-            var keyMaterials = new SortedDictionary<string, int>() { { "shards", 0 }, { "fragments", 0 }, { "motes", 0 } };
+            var keyMaterials = new SortedDictionary<string, int>()
+            {
+                { "shards", 0 }, { "fragments", 0 }, { "motes", 0 }
+            };
             var junkItems = new SortedDictionary<string, int>();
             bool isFarming = true;
 
@@ -33,22 +36,31 @@ namespace E12_LegendaryFarming
                             break;
                         }
                     }
-                    else { AddJunkItem(junkItems, quantity, item); }
+                    else
+                    {
+                        AddJunkItem(junkItems, quantity, item);
+                    }
                 }
             }
         }
 
         private static void PrintCollectedItems(SortedDictionary<string, int> keyMaterials, SortedDictionary<string, int> junkItems, string item)
         {
+            // legendary item
             var legendaryItems = new Dictionary<string, string>()
-            { { "shards", "Shadowmourne" }, { "fragments", "Valanyr" }, { "motes", "Dragonwrath" } };
-
+            {
+                { "shards", "Shadowmourne" }, { "fragments", "Valanyr" }, { "motes", "Dragonwrath" }
+            };
             Console.WriteLine($"{legendaryItems[item]} obtained!");
+
+            // key materials
             var keyMaterialsDesc = keyMaterials.OrderByDescending(x => x.Value);
             foreach (var kvp in keyMaterialsDesc)
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
+
+            // junk items
             foreach (var kvp in junkItems)
             {
                 Console.WriteLine($"{kvp.Key}: {kvp.Value}");

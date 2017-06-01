@@ -8,6 +8,24 @@ namespace L01_ParkingLot
     {
         public static void Main()
         {
+            SortedSet<string> parkingLot = GetParkingLot();
+            PrintParking(parkingLot);
+        }
+
+        private static void PrintParking(SortedSet<string> parkingLot)
+        {
+            if (parkingLot.Count != 0)
+            {
+                Console.WriteLine(string.Join("\n", parkingLot));
+            }
+            else
+            {
+                Console.WriteLine("Parking Lot is Empty");
+            }
+        }
+
+        private static SortedSet<string> GetParkingLot()
+        {
             var parkingLot = new SortedSet<string>(); // sorted
             while (true)
             {
@@ -26,14 +44,8 @@ namespace L01_ParkingLot
                     case "OUT": parkingLot.Remove(carNumber); break;
                 }
             }
-            if (parkingLot.Count != 0)
-            {
-                Console.WriteLine(string.Join("\n", parkingLot));
-            }
-            else
-            {
-                Console.WriteLine("Parking Lot is Empty");
-            }
+
+            return parkingLot;
         }
     }
 }

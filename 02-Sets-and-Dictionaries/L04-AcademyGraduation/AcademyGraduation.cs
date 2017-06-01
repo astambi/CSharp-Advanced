@@ -8,6 +8,20 @@ namespace L04_AcademyGraduation
     {
         public static void Main()
         {
+            var studentsGrades = GetStudentGrades();
+            PrintStudentGrades(studentsGrades);
+        }
+
+        private static void PrintStudentGrades(SortedDictionary<string, double[]> studentsGrades)
+        {
+            foreach (var kvp in studentsGrades)
+            {
+                Console.WriteLine($"{kvp.Key} is graduated with {kvp.Value.Average()}");
+            }
+        }
+
+        private static SortedDictionary<string, double[]> GetStudentGrades()
+        {
             int studentsCount = int.Parse(Console.ReadLine().Trim());
             var studentsGrades = new SortedDictionary<string, double[]>();
 
@@ -20,10 +34,8 @@ namespace L04_AcademyGraduation
                                 .ToArray();
                 studentsGrades[studentName] = grades;
             }
-            foreach (var kvp in studentsGrades)
-            {
-                Console.WriteLine($"{kvp.Key} is graduated with {kvp.Value.Average()}");
-            }
+
+            return studentsGrades;
         }
     }
 }

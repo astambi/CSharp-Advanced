@@ -8,6 +8,20 @@ namespace L03_CountSameValuesInArray
     {
         public static void Main()
         {
+            var counts = GetNumberCounts();
+            PrintCounts(counts);
+        }
+
+        private static void PrintCounts(SortedDictionary<decimal, int> counts)
+        {
+            foreach (var kvp in counts)
+            {
+                Console.WriteLine($"{kvp.Key} - {kvp.Value} times");
+            }
+        }
+
+        private static SortedDictionary<decimal, int> GetNumberCounts()
+        {
             var numbers = Console.ReadLine()
                         .Trim()
                         .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
@@ -22,10 +36,8 @@ namespace L03_CountSameValuesInArray
                 }
                 counts[number]++;
             }
-            foreach (var kvp in counts)
-            {
-                Console.WriteLine($"{kvp.Key} - {kvp.Value} times");
-            }
+
+            return counts;
         }
     }
 }

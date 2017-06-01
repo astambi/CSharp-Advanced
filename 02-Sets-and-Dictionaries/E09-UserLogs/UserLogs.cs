@@ -16,8 +16,7 @@ namespace E09_UserLogs
             foreach (var userIp in userLogs)
             {
                 var username = userIp.Key;
-                var ipMsgCounts = userIp.Value
-                                .Select(x => $"{x.Key} => {x.Value.Count}"); // ip => msg count
+                var ipMsgCounts = userIp.Value.Select(x => $"{x.Key} => {x.Value.Count}"); // ip => msg count
                 Console.WriteLine($"{username}: \n{string.Join(", ", ipMsgCounts)}.");
             }
         }
