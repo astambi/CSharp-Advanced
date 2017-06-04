@@ -9,9 +9,18 @@ namespace L03_GroupNumbers
         public static void Main()
         {
             PrintMatrix(GroupNumbersInMatrix());
+            //PrintMatrix(GroupNumbersInMatrix2());
         }
 
         public static void PrintMatrix(List<int>[] matrix)
+        {
+            foreach (var row in matrix)
+            {
+                Console.WriteLine(string.Join(" ", row));
+            }
+        }
+
+        public static void PrintMatrix(int[][] matrix)
         {
             foreach (var row in matrix)
             {
@@ -36,6 +45,20 @@ namespace L03_GroupNumbers
                 matrix[remainder].Add(element);
             }
 
+            return matrix;
+        }
+
+        public static int[][] GroupNumbersInMatrix2()
+        {
+            var matrix = new int[3][];
+            var elements = Console.ReadLine()
+                            .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(int.Parse)
+                            .ToArray();
+            for (int row = 0; row < matrix.Length; row++)
+            {
+                matrix[row] = elements.Where(x => Math.Abs(x % 3) == row).ToArray();
+            }
             return matrix;
         }
     }

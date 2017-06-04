@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E07-LegoBlocks", "E07-LegoB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E08-RadioactiveBunnies", "E08-RadioactiveBunnies\E08-RadioactiveBunnies.csproj", "{33CB13A4-6B40-493B-B1C4-79B53753712B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E09-Crossfire", "E09-Crossfire\E09-Crossfire.csproj", "{CF172014-2C2E-49D7-9F8F-4B904ADBA461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E10-TheHeiganDance", "E10-TheHeiganDance\E10-TheHeiganDance.csproj", "{9B786B02-97DC-489D-B396-AEC95B5ECE4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{33CB13A4-6B40-493B-B1C4-79B53753712B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33CB13A4-6B40-493B-B1C4-79B53753712B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33CB13A4-6B40-493B-B1C4-79B53753712B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF172014-2C2E-49D7-9F8F-4B904ADBA461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF172014-2C2E-49D7-9F8F-4B904ADBA461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF172014-2C2E-49D7-9F8F-4B904ADBA461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF172014-2C2E-49D7-9F8F-4B904ADBA461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B786B02-97DC-489D-B396-AEC95B5ECE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B786B02-97DC-489D-B396-AEC95B5ECE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B786B02-97DC-489D-B396-AEC95B5ECE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B786B02-97DC-489D-B396-AEC95B5ECE4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
