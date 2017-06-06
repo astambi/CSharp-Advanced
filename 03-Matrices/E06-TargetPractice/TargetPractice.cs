@@ -75,6 +75,7 @@ namespace E06_TargetPractice
             var impactRow = shotParams[0];  // valid, within the original matrix dimensions
             var impactCol = shotParams[1];  // valid, within the original matrix dimensions
             var radius = shotParams[2];     // [1, 4]
+
             for (int row = impactRow - radius; row <= impactRow + radius; row++)
             {
                 for (int col = impactCol - radius; col <= impactCol + radius; col++)
@@ -89,10 +90,8 @@ namespace E06_TargetPractice
         }
 
         private static bool isWithinMatrix(char[][] matrix, int row, int col)
-        {
-            var rows = matrix.Length;
-            var cols = matrix[0].Length;
-            return row >= 0 && row < rows && col >= 0 && col < cols;
+        {           
+            return row >= 0 && row < matrix.Length && col >= 0 && col < matrix[0].Length;
         }
 
         private static bool isWithinShootingRange(char[][] matrix, int impactRow, int impactCol, int radius, int row, int col)

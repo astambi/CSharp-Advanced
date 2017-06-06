@@ -43,7 +43,7 @@ namespace E08_RadioactiveBunnies
         private static void PrintOutcome(char[][] matrix)
         {
             PrintMatrix(matrix);
-            Console.WriteLine($"{playerStatus}: {playerPosition[0]} {playerPosition[1]}");
+            Console.WriteLine($"{playerStatus}: {string.Join(" ", playerPosition)}");
         }
 
         private static void ReplaceNewBunnies(char[][] matrix)
