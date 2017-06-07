@@ -1,0 +1,16 @@
+.gz
+--Part-3.gz - 224.086 kb
+--Part-1.gz - 223.441 kb
+--Part-2.gz - 223.345 kb
+--Part-4.gz - 215.060 kb
+--Part-0.gz - 207.781 kb
+.txt
+--CSharpAdvanced-LineNumbers.txt - 1.538 kb
+--CSharpAdvanced.txt - 1.500 kb
+--text.txt - 0.119 kb
+--result.txt - 0.029 kb
+--words.txt - 0.016 kb
+.jpg
+--Part-0.jpg - 224.000 kb
+--Part-1.jpg - 224.000 kb
+--Part-2.jpg - 224.000 kb

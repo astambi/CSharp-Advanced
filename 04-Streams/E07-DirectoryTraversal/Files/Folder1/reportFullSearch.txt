@@ -1,0 +1,24 @@
+.txt
+--CSharpAdvanced-LineNumbers.txt - 1.538 kb
+--CSharpAdvanced.txt - 1.500 kb
+--reportFullSearch.txt - 0.616 kb
+--report.txt - 0.422 kb
+--text.txt - 0.119 kb
+--result.txt - 0.029 kb
+--words.txt - 0.016 kb
+--file1InFolder1.txt - 0.009 kb
+--file2InFolder1.txt - 0.009 kb
+--file1InFolder13.txt - 0.009 kb
+--file1InFolder2.txt - 0.009 kb
+--file1InFolder3.txt - 0.009 kb
+--file1InFolder4.txt - 0.009 kb
+.gz
+--Part-3.gz - 224.086 kb
+--Part-1.gz - 223.441 kb
+--Part-2.gz - 223.345 kb
+--Part-4.gz - 215.060 kb
+--Part-0.gz - 207.781 kb
+.jpg
+--Part-0.jpg - 224.000 kb
+--Part-1.jpg - 224.000 kb
+--Part-2.jpg - 224.000 kb
