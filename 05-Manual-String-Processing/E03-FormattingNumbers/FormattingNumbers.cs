@@ -13,12 +13,12 @@ namespace E03_FormattingNumbers
             var num1 = int.Parse(numbersStr[0]);
             var num2 = double.Parse(numbersStr[1]);
             var num3 = double.Parse(numbersStr[2]);
-            var num1Bin = Convert.ToString(num1, 2);
-            if (num1Bin.Length > width)
+            var num1Binary = Convert.ToString(num1, 2);
+            if (num1Binary.Length > width)
             {
-                num1Bin = num1Bin.Substring(0, width);
+                num1Binary = num1Binary.Substring(0, width);
             }
-            Console.WriteLine($"|{num1,-width:X}|{num1Bin.PadLeft(width, '0')}|{num2,width:f2}|{num3,-width:f3}|");
+            Console.WriteLine($"|{num1,-width:X}|{num1Binary.PadLeft(width, '0')}|{num2,width:f2}|{num3,-width:f3}|");
         }
     }
 }
