@@ -2,7 +2,7 @@
 
 namespace E02_Knights_Of_Honor
 {
-    public class Program
+    public class KnightsOfHonor
     {
         public static void Main()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace E03_CustomMinFunction
 {
-    class CustomMinFunction
+    public class CustomMinFunction
     {
         public static void Main()
         {

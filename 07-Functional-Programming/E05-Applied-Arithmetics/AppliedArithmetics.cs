@@ -11,7 +11,6 @@ namespace E05_Applied_Arithmetics
                         .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                         .Select(long.Parse)
                         .ToList();
-
             Func<long, long> add = n => n += 1;
             Func<long, long> subtract = n => n -= 1;
             Func<long, long> multiply = n => n * 2;

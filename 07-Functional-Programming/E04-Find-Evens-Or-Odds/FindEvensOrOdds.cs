@@ -13,24 +13,24 @@ namespace E04_Find_Evens_Or_Odds
                         .Select(int.Parse)
                         .OrderBy(n => n)
                         .ToList();
-            var oddEven = Console.ReadLine().ToLower();
+            var oddOrEven = Console.ReadLine().ToLower();
 
             Predicate<int> isEven = n => n % 2 == 0;
 
-            var numbers = GetNumbers(range, oddEven, isEven);
+            var numbers = GetNumbers(range, oddOrEven, isEven);
             if (numbers.Count != 0)
             {
                 Console.WriteLine(string.Join(" ", numbers));
             }
         }
 
-        private static List<int> GetNumbers(List<int> range, string oddEven, Predicate<int> isEven)
+        private static List<int> GetNumbers(List<int> range, string oddOrEven, Predicate<int> isEven)
         {
             var numbers = new List<int>();
             for (int n = range[0]; n <= range[1]; n++)
             {
-                if ((isEven(n) && oddEven == "even") || 
-                    (!isEven(n) && oddEven == "odd"))
+                if ((isEven(n) && oddOrEven == "even") || 
+                    (!isEven(n) && oddOrEven == "odd"))
                 {
                     numbers.Add(n);
                 }
