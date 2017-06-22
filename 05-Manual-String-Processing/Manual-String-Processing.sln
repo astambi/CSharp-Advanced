@@ -37,8 +37,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E15-MelrahShake", "E15-Melr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E16-ExtractHyperlinks", "E16-ExtractHyperlinks\E16-ExtractHyperlinks.csproj", "{62E4F0A6-636B-4810-8932-C660DFD7E998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E16-ExtractHyperlinksRegex", "E16-ExtractHyperlinksRegex\E16-ExtractHyperlinksRegex.csproj", "{6F392BCC-EFF6-4084-9352-1031E383A813}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E13-MagicExchangeableWords", "E13-MagicExchangeableWords\E13-MagicExchangeableWords.csproj", "{B68D3031-4903-4A74-90A4-F2B0919CC85E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E12-CharacterMultiplier", "E12-CharacterMultiplier\E12-CharacterMultiplier.csproj", "{119FB60D-886B-4284-B685-060BE8C1F83D}"
@@ -121,10 +119,6 @@ Global
 		{62E4F0A6-636B-4810-8932-C660DFD7E998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E4F0A6-636B-4810-8932-C660DFD7E998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62E4F0A6-636B-4810-8932-C660DFD7E998}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F392BCC-EFF6-4084-9352-1031E383A813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F392BCC-EFF6-4084-9352-1031E383A813}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F392BCC-EFF6-4084-9352-1031E383A813}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F392BCC-EFF6-4084-9352-1031E383A813}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B68D3031-4903-4A74-90A4-F2B0919CC85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B68D3031-4903-4A74-90A4-F2B0919CC85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B68D3031-4903-4A74-90A4-F2B0919CC85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
