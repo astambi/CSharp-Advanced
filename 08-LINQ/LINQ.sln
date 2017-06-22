@@ -45,7 +45,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E12-LittleJohn", "E12-Littl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E13-OfficeStuff", "E13-OfficeStuff\E13-OfficeStuff.csproj", "{5B3E9341-FACC-43F9-9876-89FD8A5E9BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportToExcell", "ExportToExcell\ExportToExcell.csproj", "{8A8285DB-E802-4FB7-861D-8E5A9A217763}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E14-ExportToExcell", "E14-ExportToExcell\E14-ExportToExcell.csproj", "{13D58B90-BF95-4845-8EFC-45E4B2230EF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,10 +137,10 @@ Global
 		{5B3E9341-FACC-43F9-9876-89FD8A5E9BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B3E9341-FACC-43F9-9876-89FD8A5E9BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B3E9341-FACC-43F9-9876-89FD8A5E9BED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8A8285DB-E802-4FB7-861D-8E5A9A217763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A8285DB-E802-4FB7-861D-8E5A9A217763}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A8285DB-E802-4FB7-861D-8E5A9A217763}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A8285DB-E802-4FB7-861D-8E5A9A217763}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D58B90-BF95-4845-8EFC-45E4B2230EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D58B90-BF95-4845-8EFC-45E4B2230EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D58B90-BF95-4845-8EFC-45E4B2230EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D58B90-BF95-4845-8EFC-45E4B2230EF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
