@@ -25,7 +25,8 @@ namespace E02_StudentsByFirstAndLastName
                 var input = Console.ReadLine();
                 if (input == "END") break;
 
-                var tokens = input.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                var tokens = input
+                            .Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 students.Add(tokens);
             }
 

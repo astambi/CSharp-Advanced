@@ -11,17 +11,13 @@ namespace E08_WeakStudents
             var students = GetStudents();
 
             students
-                .Select(s => new
-                {
-                    Name = s[0] + " " + s[1],
-                    WeakMarksCount = s
-                                    .Skip(2)
-                                    .Select(int.Parse)
-                                    .Count(m => m <= 3)
-                })
-                .Where(s => s.WeakMarksCount >= 2)
+                .Where(s => s
+                            .Skip(2)
+                            .Select(int.Parse)
+                            .Count(m => m <= 3) >= 2)
+                .Select(s => s[0] + " " + s[1])
                 .ToList()
-                .ForEach(s => Console.WriteLine(s.Name));
+                .ForEach(s => Console.WriteLine(s));
         }
 
         private static List<string[]> GetStudents()
@@ -33,7 +29,8 @@ namespace E08_WeakStudents
                 var input = Console.ReadLine();
                 if (input == "END") break;
 
-                var tokens = input.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                var tokens = input
+                            .Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 students.Add(tokens);
             }
 

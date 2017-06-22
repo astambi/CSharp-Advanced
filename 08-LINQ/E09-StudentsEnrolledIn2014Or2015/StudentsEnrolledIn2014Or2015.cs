@@ -13,9 +13,9 @@ namespace E09_StudentsEnrolledIn2014Or2015
 
             students
                 .Where(s => enrollmentYears.Any(y => s[0].EndsWith(y)))
-                .Select(s => new { Marks = s.Skip(1) })
+                .Select(s => s.Skip(1)) // marks
                 .ToList()
-                .ForEach(s => Console.WriteLine(string.Join(" ", s.Marks)));
+                .ForEach(s => Console.WriteLine(string.Join(" ", s)));
         }
 
         private static List<string[]> GetStudents()
@@ -27,7 +27,8 @@ namespace E09_StudentsEnrolledIn2014Or2015
                 var input = Console.ReadLine();
                 if (input == "END") break;
 
-                var tokens = input.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                var tokens = input
+                            .Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 students.Add(tokens);
             }
 

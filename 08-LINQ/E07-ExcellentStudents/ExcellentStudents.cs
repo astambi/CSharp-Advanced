@@ -11,7 +11,9 @@ namespace E07_ExcellentStudents
             var students = GetStudents();
 
             var selection = students
-                            .Where(s => s.Skip(2).ToList().Any(m => m == "6"))
+                            .Where(s => s
+                                        .Skip(2)
+                                        .Any(m => m == "6"))
                             .Select(s => s[0] + " " + s[1]);
 
             Console.WriteLine(string.Join("\n", selection));
@@ -25,7 +27,8 @@ namespace E07_ExcellentStudents
                 var input = Console.ReadLine();
                 if (input == "END") break;
 
-                var tokens = input.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
+                var tokens = input
+                            .Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 students.Add(tokens);
             }
 
