@@ -24,15 +24,16 @@ namespace E09_ListOfPredicates
             for (int num = 1; num <= n; num++)
             {
                 var isDivisible = true;
-
                 foreach (var d in divisors)
                 {
                     Predicate<int> isNotDivisor = x => num % x != 0;
+
                     if (isNotDivisor(d))
                     {
                         isDivisible = false; break;
                     }
                 }
+
                 if (isDivisible)
                 {
                     divisibleNumbers.Add(num);

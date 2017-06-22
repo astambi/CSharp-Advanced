@@ -40,7 +40,8 @@ namespace E11_ThePartyReservationFilterModule
                     filters["Length"] = x => x.Length == int.Parse(filterParameter);
                     filters["Contains"] = x => x.Contains(filterParameter);
 
-                    if (filters.ContainsKey(filterType) && filters[filterType](invitations[i]))
+                    if (filters.ContainsKey(filterType) && 
+                        filters[filterType](invitations[i]))
                     {
                         isExcluded = true; break;
                     }
@@ -106,8 +107,10 @@ namespace E11_ThePartyReservationFilterModule
 
                 switch (command)
                 {
-                    case "Add filter":      commands.Add(filterType + ";" + filterParameter); break;
-                    case "Remove filter":   commands.Remove(filterType + ";" + filterParameter); break;
+                    case "Add filter":
+                        commands.Add(filterType + ";" + filterParameter); break;
+                    case "Remove filter":
+                        commands.Remove(filterType + ";" + filterParameter); break;
                     default: break;
                 }
             }

@@ -11,6 +11,14 @@ namespace E10_PredicateParty
             var guests = Console.ReadLine()
                         .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                         .ToList();
+
+            guests = GetCommands(guests);
+
+            PrintGuests(guests);
+        }
+
+        private static List<string> GetCommands(List<string> guests)
+        {
             while (true)
             {
                 var input = Console.ReadLine();
@@ -24,10 +32,12 @@ namespace E10_PredicateParty
                 var pattern = commands[2];
 
                 var filteredGuests = FilterGuests(guests, condition, pattern);
+                //var filteredGuests = FilterGuestsDict(guests, condition, pattern);
+
                 guests = UpdateGuests(guests, filteredGuests, command);
             }
 
-            PrintGuests(guests);
+            return guests;
         }
 
         private static void PrintGuests(List<string> guests)
@@ -69,6 +79,20 @@ namespace E10_PredicateParty
             return guests;
         }
 
+        private static List<string> FilterGuestsDict(List<string> guests, string condition, string pattern)
+        {
+            var filters = new Dictionary<string, Predicate<string>>();
+            filters["StartsWith"] = s => s.StartsWith(pattern);
+            filters["EndsWith"] = s => s.EndsWith(pattern);
+            filters["Length"] = s => s.Length == int.Parse(pattern);
+
+            var filteredGuests = guests
+                                .Where(g => filters[condition](g))
+                                .ToList();         
+               
+            return filteredGuests;
+        }
+
         private static List<string> FilterGuests(List<string> guests, string condition, string pattern)
         {
             Predicate<string> startsWith = s => s.StartsWith(pattern);
@@ -78,9 +102,21 @@ namespace E10_PredicateParty
             var filteredGuests = new List<string>();
             switch (condition)
             {
-                case "StartsWith":  filteredGuests = guests.Where(g => startsWith(g)).ToList(); break;
-                case "EndsWith":    filteredGuests = guests.Where(g => endsWith(g)).ToList(); break;
-                case "Length":      filteredGuests = guests.Where(g => hasLength(g)).ToList(); break;
+                case "StartsWith":
+                    filteredGuests = guests
+                                    .Where(g => startsWith(g))
+                                    .ToList();
+                    break;
+                case "EndsWith":
+                    filteredGuests = guests
+                                    .Where(g => endsWith(g))
+                                    .ToList();
+                    break;
+                case "Length":
+                    filteredGuests = guests
+                                    .Where(g => hasLength(g))
+                                    .ToList();
+                    break;
                 default: break;
             }
             return filteredGuests;

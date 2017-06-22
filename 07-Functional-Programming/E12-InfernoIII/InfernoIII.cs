@@ -74,8 +74,10 @@ namespace E12_InfernoIII
 
                 switch (command)
                 {
-                    case "Exclude": commands.Add(filterType + ";" + filterParameter); break;
-                    case "Reverse": commands.Remove(filterType + ";" + filterParameter); break;
+                    case "Exclude":
+                        commands.Add(filterType + ";" + filterParameter); break;
+                    case "Reverse":
+                        commands.Remove(filterType + ";" + filterParameter); break;
                     default: break;
                 }
             }
