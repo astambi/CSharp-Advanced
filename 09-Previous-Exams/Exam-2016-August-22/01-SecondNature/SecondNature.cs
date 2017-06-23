@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace E01_SecondNature
+namespace _01_SecondNature
 {
     public class SecondNature
     {
@@ -45,9 +45,7 @@ namespace E01_SecondNature
 
         private static bool AreExisting(Stack<long> buckets, Stack<long> flowers)
         {
-            if (flowers.Any() && buckets.Any()) return true;
-
-            return false;
+            return flowers.Any() && buckets.Any();
         }
 
         private static void Print(Stack<long> flowers, Stack<long> buckets, Queue<long> secondNatureFlowers)
