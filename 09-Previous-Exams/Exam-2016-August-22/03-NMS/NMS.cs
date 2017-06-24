@@ -16,44 +16,28 @@ namespace _03_NMS
 
         private static List<string> GetIncreasingWords(string message)
         {
-            var increasingWords = new List<string>();
-            var currentChars = new Stack<char>();
-            foreach (var letter in message)
+            var words = new List<string>();
+            var currentWord = new StringBuilder();
+            currentWord.Append(message[0]);
+
+            for (int i = 1; i < message.Length; i++)
             {
-                if (currentChars.Count == 0)
+                if (char.ToLower(message[i]) >= char.ToLower(message[i - 1]))
                 {
-                    currentChars.Push(letter);
-                }
-                else if (CharToLower(letter) >= CharToLower(currentChars.Peek()))
-                {
-                    currentChars.Push(letter);
+                    currentWord.Append(message[i]);
                 }
                 else
                 {
-                    increasingWords.Add(ReverseWord(currentChars));
-                    currentChars.Clear();
-                    currentChars.Push(letter);
+                    words.Add(currentWord.ToString());
+                    currentWord.Clear();
+                    currentWord.Append(message[i]);
+                }
+                if (i == message.Length - 1)
+                {
+                    words.Add(currentWord.ToString());
                 }
             }
-            increasingWords.Add(ReverseWord(currentChars));
-            return increasingWords;
-        }
-
-        private static string ReverseWord(Stack<char> charsStack)
-        {
-            var reversedArr = new char[charsStack.Count];
-            var i = charsStack.Count - 1;
-            foreach (var ch in charsStack)
-            {
-                reversedArr[i--] = ch;
-            }            
-            return new string(reversedArr);
-        }
-
-        private static char CharToLower(char ch)
-        {
-            if (Char.IsLower(ch)) return ch;
-            return (char)(ch - 'A' + 'a');
+            return words;
         }
 
         private static string GetMessage()

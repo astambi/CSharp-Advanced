@@ -24,7 +24,7 @@ namespace _02_CubicsRube
                 var coordinates = tokens.Take(3);
                 var particle = tokens[3];
 
-                if (isInsideRube(coordinates, size) && particle > 0) // NB adding damage from particle
+                if (isInsideRube(coordinates, size) && particle != 0) // NB 0 particles do not affect cells
                 {
                     unaffectedCells--;
                     damageParticles += particle;
