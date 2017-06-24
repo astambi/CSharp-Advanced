@@ -11,7 +11,7 @@ namespace E09_TextFilter
 
             foreach (var word in bannedWords)
             {
-                text = text.Replace(word, new String('*', word.Length));
+                text = text.Replace(word, new string('*', word.Length));
             }
             Console.WriteLine(text);
         }

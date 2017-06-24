@@ -29,12 +29,12 @@ namespace E14_LettersChangeNumbers
             var number = int.Parse(arg.Substring(1, arg.Length - 2));
             decimal sum = number;
 
-            switch (Char.IsUpper(firstLetter))
+            switch (char.IsUpper(firstLetter))
             {
                 case true: sum /= GetLetterPosition(firstLetter); break;
                 case false: sum *= GetLetterPosition(firstLetter); break;
             }
-            switch (Char.IsUpper(lastLetter))
+            switch (char.IsUpper(lastLetter))
             {
                 case true: sum -= GetLetterPosition(lastLetter); break;
                 case false: sum += GetLetterPosition(lastLetter); break;
@@ -44,11 +44,11 @@ namespace E14_LettersChangeNumbers
 
         private static int GetLetterPosition(char letter)
         {
-            if (Char.IsUpper(letter))
+            if (char.IsUpper(letter))
             {
                 return (int)letter - 'A' + 1;
             }
-            if (Char.IsLower(letter))
+            if (char.IsLower(letter))
             {
                 return (int)letter - 'a' + 1;
             }

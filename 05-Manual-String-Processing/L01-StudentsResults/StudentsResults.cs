@@ -14,8 +14,9 @@ namespace L01_StudentsResults
 
             for (int i = 0; i < studentsCount; i++)
             {
-                var args = Console.ReadLine().Trim()
-                            .Split(new[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
+                var args = Console.ReadLine()
+                          .Trim()
+                          .Split(new[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
                 var student = args[0];
                 var results = args[1]
                             .Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries)

@@ -25,8 +25,8 @@ namespace L03_ParseTags
 
                 builder.Append(text.Substring(0, indexOpen));
                 var textUpper = text
-                    .Substring(indexOpen + tagOpen.Length, indexClose - indexOpen - tagOpen.Length)
-                    .ToUpper();
+                               .Substring(indexOpen + tagOpen.Length, indexClose - indexOpen - tagOpen.Length)
+                               .ToUpper();
                 builder.Append(textUpper);
 
                 text = text.Substring(indexClose + tagClose.Length);
