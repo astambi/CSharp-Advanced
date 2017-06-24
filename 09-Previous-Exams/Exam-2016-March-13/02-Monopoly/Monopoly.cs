@@ -5,11 +5,11 @@ namespace _02_Monopoly
 {
     public class Monopoly
     {
+        public const decimal hotelIncome = 10m;
+
         public static decimal money;
         public static int turns;
         public static int hotels;
-
-        public const decimal hotelIncome = 10m;
 
         public static void Main()
         {
@@ -18,28 +18,6 @@ namespace _02_Monopoly
             MovePlayer(matrix);
             PrintGameResult();
         }
-
-        private static void MovePlayer(char[][] matrix)
-        {
-            for (int row = 0; row < matrix.Length; row++)
-            {
-                if (row % 2 == 0) // direction Right
-                {
-                    for (int col = 0; col < matrix[row].Length; col++)
-                    {
-                        UpdateGameResult(matrix, row, col);
-                    }
-                }
-                else // direction Left
-                {
-                    for (int col = matrix[row].Length - 1; col >= 0; col--)
-                    {
-                        UpdateGameResult(matrix, row, col);
-                    }
-                }
-            }
-        }
-
         private static void PrintGameResult()
         {
             Console.WriteLine($"Turns {turns}");
@@ -70,6 +48,18 @@ namespace _02_Monopoly
             money += hotels * hotelIncome;
         }
 
+        private static void MovePlayer(char[][] matrix)
+        {
+            for (int row = 0; row < matrix.Length; row++)
+            {
+                for (int col = 0; col < matrix[row].Length; col++)
+                {
+                    if (row % 2 == 0)   UpdateGameResult(matrix, row, col);
+                    else                UpdateGameResult(matrix, row, matrix[row].Length - 1 - col);
+                }
+            }
+        }
+
         private static void InitializePlayer()
         {
             money = 50;
@@ -85,7 +75,6 @@ namespace _02_Monopoly
                             .ToList();
             var rows = dimensions[0];
             var matrix = new char[rows][];
-
             for (int row = 0; row < rows; row++)
             {
                 matrix[row] = Console.ReadLine().ToCharArray();
