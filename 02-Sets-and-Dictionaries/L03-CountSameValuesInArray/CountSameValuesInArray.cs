@@ -23,10 +23,10 @@ namespace L03_CountSameValuesInArray
         private static SortedDictionary<decimal, int> GetNumberCounts()
         {
             var numbers = Console.ReadLine()
-                        .Trim()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(decimal.Parse)
-                        .ToArray();
+                         .Trim()
+                         .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                         .Select(decimal.Parse)
+                         .ToArray();
             var counts = new SortedDictionary<decimal, int>();
             foreach (var number in numbers)
             {

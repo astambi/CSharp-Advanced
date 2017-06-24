@@ -19,7 +19,9 @@ namespace E12_LegendaryFarming
 
             while (isFarming)
             {
-                var args = Console.ReadLine().Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var args = Console.ReadLine()
+                          .Trim()
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 for (int i = 0; i < args.Length; i += 2)
                 {
                     var quantity = int.Parse(args[i]);

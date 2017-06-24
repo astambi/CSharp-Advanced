@@ -37,7 +37,7 @@ namespace E05_Phonebook
                 string input = Console.ReadLine();
                 if (input == "search") break;
 
-                if (String.IsNullOrEmpty(input)) continue;
+                if (string.IsNullOrEmpty(input)) continue;
 
                 var contact = input.Split(new[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
                 string name = contact[0];

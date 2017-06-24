@@ -28,7 +28,9 @@ namespace E11_LogsAggregator
 
             for (int i = 0; i < logsCount; i++)
             {
-                var args = Console.ReadLine().Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var args = Console.ReadLine()
+                          .Trim()
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 var ip = args[0];
                 var user = args[1];
                 var duration = int.Parse(args[2]);

@@ -38,7 +38,9 @@ namespace E14_DragonArmy
             int dragonsCount = int.Parse(Console.ReadLine());
             for (int i = 0; i < dragonsCount; i++)
             {
-                var args = Console.ReadLine().Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var args = Console.ReadLine()
+                          .Trim()
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 var type = args[0];
                 var name = args[1];
                 var damage = args[2] == "null" ? defaultDamage : int.Parse(args[2]);

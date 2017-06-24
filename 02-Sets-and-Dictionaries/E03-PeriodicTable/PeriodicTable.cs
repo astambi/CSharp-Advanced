@@ -11,8 +11,9 @@ namespace E03_PeriodicTable
             var periodicTable = new SortedSet<string>();
             for (int i = 0; i < n; i++)
             {
-                var elements = Console.ReadLine().Trim()
-                            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var elements = Console.ReadLine()
+                              .Trim()
+                              .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 foreach (var element in elements)
                 {
                     periodicTable.Add(element);

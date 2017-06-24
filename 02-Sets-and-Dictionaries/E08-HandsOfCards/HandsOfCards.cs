@@ -66,13 +66,13 @@ namespace E08_HandsOfCards
                 if (input == "JOKER") break;
 
                 var args = input
-                            .Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(x => x.Trim())
-                            .ToArray();
+                          .Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(x => x.Trim())
+                          .ToArray();
                 string player = args[0];
                 var cards = args[1]
-                            .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(x => x.Trim());
+                           .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                           .Select(x => x.Trim());
                 if (!playerCards.ContainsKey(player))
                 {
                     playerCards[player] = new HashSet<string>();

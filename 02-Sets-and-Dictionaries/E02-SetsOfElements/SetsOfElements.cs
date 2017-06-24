@@ -9,9 +9,9 @@ namespace E02_SetsOfElements
         public static void Main()
         {
             int[] setsLength = Console.ReadLine().Trim()
-                            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(int.Parse)
-                            .ToArray();
+                              .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                              .Select(int.Parse)
+                              .ToArray();
             var setN = new HashSet<int>();
             var setM = new HashSet<int>();
             for (int i = 0; i < setsLength[0]; i++)

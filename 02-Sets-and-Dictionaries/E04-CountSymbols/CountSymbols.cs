@@ -7,7 +7,7 @@ namespace E04_CountSymbols
     {
         public static void Main()
         {
-            SortedDictionary<char, int> symbolCounts = GetSymbolCounts();
+            var symbolCounts = GetSymbolCounts();
             PrintCounts(symbolCounts);
         }
 

@@ -15,12 +15,14 @@ namespace L02_SoftUniParty
             {
                 string input = Console.ReadLine().Trim();
                 if (input == "PARTY") break;
+
                 AddReservation(vipReservations, regularReservations, input);
             }
             while (true)
             {
                 string input = Console.ReadLine().Trim();
                 if (input == "END") break;
+
                 RemoveReservation(vipReservations, regularReservations, input);
             }
             //PrintRemainingReservations(vipReservations, regularReservations);

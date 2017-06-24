@@ -33,9 +33,9 @@ namespace L01_ParkingLot
                 if (input == "END") break;
 
                 var args = input
-                    .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                    .Select(x => x.Trim())
-                    .ToArray();
+                          .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(x => x.Trim())
+                          .ToArray();
                 string direction = args[0];
                 string carNumber = args[1];
                 switch (direction)

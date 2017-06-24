@@ -29,9 +29,9 @@ namespace L04_AcademyGraduation
             {
                 string studentName = Console.ReadLine().Trim();
                 double[] grades = Console.ReadLine().Trim()
-                                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                                .Select(double.Parse)
-                                .ToArray();
+                                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                                 .Select(double.Parse)
+                                 .ToArray();
                 studentsGrades[studentName] = grades;
             }
 
