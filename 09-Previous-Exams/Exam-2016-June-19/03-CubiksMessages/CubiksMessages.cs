@@ -125,7 +125,7 @@ namespace _03_CubiksMessages
 
             foreach (var ch in text)
             {
-                if (Char.IsDigit(ch))
+                if (char.IsDigit(ch))
                 {
                     indices.Add(int.Parse(ch.ToString()));
                 }

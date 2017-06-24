@@ -58,8 +58,8 @@ namespace _03_BasicMarkupLanguage
             var builder = new StringBuilder();
             foreach (var ch in content)
             {
-                if (!Char.IsLetter(ch))     builder.Append(ch);
-                else if (Char.IsLower(ch))  builder.Append(char.ToUpper(ch));
+                if (!char.IsLetter(ch))     builder.Append(ch);
+                else if (char.IsLower(ch))  builder.Append(char.ToUpper(ch));
                 else                        builder.Append(char.ToLower(ch));
             }
             PrintResult(builder.ToString());
