@@ -7,7 +7,9 @@
     {
         public static void Main()
         {
-            char[] parenthesesArr = Console.ReadLine().Trim().ToCharArray();
+            var parenthesesArr = Console.ReadLine()
+                                .Trim()
+                                .ToCharArray();
             if (parenthesesArr.Length % 2 != 0) // odd count of parentheses
             {
                 Console.WriteLine("NO"); return;

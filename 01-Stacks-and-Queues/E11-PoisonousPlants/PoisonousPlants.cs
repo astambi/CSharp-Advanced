@@ -9,10 +9,11 @@
         public static void Main()
         {
             int plantsCount = int.Parse(Console.ReadLine());
-            var plants = Console.ReadLine().Trim()
-                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)                // plant poison
-                .ToArray();
+            var plants = Console.ReadLine()
+                        .Trim()
+                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Select(int.Parse)        // plant poison
+                        .ToArray();
             var daysToDie = new int[plantsCount]; // day each plant dies (0 => plant never dies)
             var plantsLeftSeq = new Stack<int>(); // plants (indices) to the left of given plant
             plantsLeftSeq.Push(0);                // first plant pushed to the stack

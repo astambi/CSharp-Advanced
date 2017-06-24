@@ -13,9 +13,9 @@
 
             for (int i = 0; i < operationsCount; i++)
             {
-                string[] args = Console.ReadLine()
-                    .Trim()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var args = Console.ReadLine()
+                        .Trim()
+                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 int operation = int.Parse(args[0]);
                 switch (operation)
                 {

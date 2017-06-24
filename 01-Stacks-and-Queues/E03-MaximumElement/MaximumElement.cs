@@ -15,10 +15,10 @@
             for (int i = 0; i < queriesCount; i++)
             {
                 var args = Console.ReadLine()
-                    .Trim()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse)
-                    .ToArray();
+                          .Trim()
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(int.Parse)
+                          .ToArray();
 
                 switch (args[0])
                 {

@@ -15,10 +15,10 @@
             {
                 // [amount of petrol, distance to next petrol pump]
                 var pumpInfo = Console.ReadLine()
-                    .Trim()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                    .Select(long.Parse)
-                    .ToArray();
+                              .Trim()
+                              .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                              .Select(long.Parse)
+                              .ToArray();
                 pumps.Enqueue(pumpInfo);
             }
 

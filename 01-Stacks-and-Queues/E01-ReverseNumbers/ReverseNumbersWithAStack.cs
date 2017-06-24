@@ -9,9 +9,9 @@
         static void Main()
         {
             var integersArr = Console.ReadLine()
-                .Trim()
-                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse);
+                             .Trim()
+                             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                             .Select(int.Parse);
             var integersStack = new Stack<int>(integersArr);
             Console.WriteLine(string.Join(" ", integersStack));
         }

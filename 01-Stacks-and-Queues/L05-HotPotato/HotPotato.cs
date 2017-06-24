@@ -8,8 +8,8 @@
         static void Main()
         {
             var kidsArr = Console.ReadLine()
-                .Trim()
-                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                         .Trim()
+                         .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             int numberOfTosses = int.Parse(Console.ReadLine());
 
             if (kidsArr.Length == 0) return;

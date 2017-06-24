@@ -13,11 +13,11 @@
         }
         private static void Calculator1()
         {
-            string[] stringInput = Console.ReadLine()
-                .Trim()
-                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Reverse()
-                .ToArray();
+            var stringInput = Console.ReadLine()
+                            .Trim()
+                            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Reverse()
+                            .ToArray();
             Stack<string> elements = new Stack<string>(stringInput);
 
             int result = elements.Count > 0 ? int.Parse(elements.Pop()) : 0;
@@ -32,11 +32,11 @@
 
         private static void Calculator2()
         {
-            string[] stringInput = Console.ReadLine()
-                .Trim()
-                .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                .Reverse()
-                .ToArray();
+            var stringInput = Console.ReadLine()
+                            .Trim()
+                            .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Reverse()
+                            .ToArray();
             Stack<string> elements = new Stack<string>(stringInput);
 
             while (elements.Count > 2)
