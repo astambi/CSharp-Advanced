@@ -81,9 +81,9 @@ namespace E09_Crossfire
         private static List<List<int>> GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var matrix = new List<List<int>>();
             var number = 1;
             for (int row = 0; row < size[0]; row++)

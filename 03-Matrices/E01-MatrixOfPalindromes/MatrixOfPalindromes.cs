@@ -22,9 +22,9 @@ namespace E01_MatrixOfPalindromes
         public static string[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var rows = size[0];
             var cols = size[1];
             var matrix = new string[rows][];
@@ -39,7 +39,10 @@ namespace E01_MatrixOfPalindromes
                     var secondLetter = (char)(firstLetter + col);
 
                     var palindrome = new StringBuilder();
-                    palindrome.Append(firstLetter).Append(secondLetter).Append(firstLetter);
+                    palindrome
+                        .Append(firstLetter)
+                        .Append(secondLetter)
+                        .Append(firstLetter);
                     matrix[row][col] = palindrome.ToString();
                 }
             }

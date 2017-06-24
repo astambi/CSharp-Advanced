@@ -36,9 +36,9 @@ namespace L03_GroupNumbers
                 matrix[row] = new List<int>();
             }
             var elements = Console.ReadLine()
-                            .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(int.Parse)
-                            .ToArray();
+                          .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(int.Parse)
+                          .ToArray();
             foreach (var element in elements)
             {
                 var remainder = Math.Abs(element % 3);
@@ -52,9 +52,9 @@ namespace L03_GroupNumbers
         {
             var matrix = new int[3][];
             var elements = Console.ReadLine()
-                            .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(int.Parse)
-                            .ToArray();
+                          .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(int.Parse)
+                          .ToArray();
             for (int row = 0; row < matrix.Length; row++)
             {
                 matrix[row] = elements.Where(x => Math.Abs(x % 3) == row).ToArray();

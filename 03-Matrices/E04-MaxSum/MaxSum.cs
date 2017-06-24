@@ -68,9 +68,9 @@ namespace E04_MaxSum
         private static int[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var rows = size[0];
             var matrix = new int[rows][];
 

@@ -155,9 +155,9 @@ namespace E08_RadioactiveBunnies
         private static char[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var matrix = new char[size[0]][];
             for (int row = 0; row < size[0]; row++)
             {

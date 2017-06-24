@@ -111,9 +111,9 @@ namespace E06_TargetPractice
         private static char[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var pattern = Console.ReadLine().Trim();
             int rows = size[0];
             int cols = size[1];

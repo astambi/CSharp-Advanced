@@ -10,9 +10,9 @@ namespace E11_ParkingSystem2
         {
             var parking = new Dictionary<int, HashSet<int>>(); // row, col
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var cols = size[1];
 
             while (true)

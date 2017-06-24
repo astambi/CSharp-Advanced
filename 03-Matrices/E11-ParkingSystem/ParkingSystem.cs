@@ -17,9 +17,9 @@ namespace E11_ParkingSystem
                 if (input == "stop") break;
 
                 var args = input
-                            .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                            .Select(int.Parse)
-                            .ToArray();
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                          .Select(int.Parse)
+                          .ToArray();
                 var entryRow = args[0]; // entry col = 0
                 var targetRow = args[1];
                 var targetCol = args[2];
@@ -27,7 +27,8 @@ namespace E11_ParkingSystem
 
                 switch (matrix[targetRow][targetCol])
                 {
-                    case false: foundFreeParkingSpot = true; break;
+                    case false:
+                        foundFreeParkingSpot = true; break;
                     case true:
                         if (!matrix[targetRow].Skip(1).Any(x => x == false)) break;
 
@@ -89,9 +90,9 @@ namespace E11_ParkingSystem
         private static bool[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var matrix = new bool[size[0]][];
             for (int row = 0; row < matrix.Length; row++)
             {

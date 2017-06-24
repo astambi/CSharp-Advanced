@@ -42,7 +42,8 @@ namespace E10_TheHeiganDance
 
         private static bool EscapeInDirection(int row, int col, int spellRow, int spellCol)
         {
-            if (IsPointInsideMatrix(row, col) && !IsWithinSpellRange(spellRow, spellCol, new int[] { row, col }))
+            if (IsPointInsideMatrix(row, col) && 
+                !IsWithinSpellRange(spellRow, spellCol, new int[] { row, col }))
             {
                 playerPosition = new int[] { row, col };
                 return true;
@@ -110,7 +111,7 @@ namespace E10_TheHeiganDance
             pointsPlayer = 18500;
             pointsHeigan = 3000000;
             pendingDamage = 0;
-            lastSpell = String.Empty;
+            lastSpell = string.Empty;
         }
     }
 }

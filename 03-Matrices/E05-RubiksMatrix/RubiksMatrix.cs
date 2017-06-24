@@ -67,7 +67,9 @@ namespace E05_RubiksMatrix
 
             for (int command = 0; command < commandsCount; command++)
             {
-                var args = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+                var args = Console.ReadLine()
+                          .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                          .ToArray();
                 var rotatedRowCol = int.Parse(args[0]);
                 var direction = args[1];
                 var movesCount = int.Parse(args[2]);
@@ -147,9 +149,9 @@ namespace E05_RubiksMatrix
         private static int[][] GetMatrix()
         {
             var size = Console.ReadLine()
-                        .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(int.Parse)
-                        .ToArray();
+                      .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                      .Select(int.Parse)
+                      .ToArray();
             var rows = size[0];
             var cols = size[1];
             var matrix = new int[rows][];

@@ -80,7 +80,7 @@ namespace E12_StringMatrixRotation
             for (int row = 0; row < rows; row++)
             {
                 var builder = new StringBuilder(textList[row]);
-                builder.Append(new String(' ', cols - textList[row].Length));
+                builder.Append(new string(' ', cols - textList[row].Length));
                 matrix[row] = builder.ToString().ToCharArray();
             }
 
